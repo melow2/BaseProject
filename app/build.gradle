@@ -15,6 +15,7 @@ android {
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String","API_KEY","\"b1be3e49b0412cc511ec689e39ce76f6\""
     }
 
     buildTypes {
@@ -49,6 +50,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     // Gson
     implementation 'com.google.code.gson:gson:2.8.5'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
     // Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
     // RecyclerView
@@ -92,7 +97,7 @@ dependencies {
     implementation "androidx.room:room-runtime:2.2.5"
     implementation "androidx.room:room-ktx:2.2.5"
     kapt "androidx.room:room-compiler:2.2.5"
-    //android.arch.persistence.room:runtime
+    // android.arch.persistence.room:runtime
     // add exo player dependency here
     implementation "com.google.android.exoplayer:exoplayer:2.7.3"
     implementation 'org.jsoup:jsoup:1.10.3'
