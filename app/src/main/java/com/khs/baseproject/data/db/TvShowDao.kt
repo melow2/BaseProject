@@ -22,5 +22,5 @@ interface TvShowDao {
     suspend fun deleteAllTvShows()
 
     @Query("SELECT * FROM popular_tv_show")
-    suspend fun getTvShows(tvShows: List<TvShow>)
+    suspend fun getTvShows():List<TvShow>
 }
