@@ -7,6 +7,7 @@ import com.khs.baseproject.domain.usecase.GetMovieUsecase
 import com.khs.baseproject.domain.usecase.GetTvShowsUsecase
 import com.khs.baseproject.domain.usecase.UpdateMoviesUsecase
 import com.khs.baseproject.domain.usecase.UpdateTvShowsUsecase
+import javax.inject.Inject
 
 class TvShowViewModelFactory(
     private val mApplication: Application,

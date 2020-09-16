@@ -15,7 +15,6 @@ android {
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String","API_KEY","\"b1be3e49b0412cc511ec689e39ce76f6\""
     }
 
     buildTypes {
