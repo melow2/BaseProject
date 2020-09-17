@@ -1,5 +1,6 @@
 package com.khs.baseproject.data.model.movie
 
+import androidx.recyclerview.widget.DiffUtil
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -18,4 +19,19 @@ data class Movie(
     val poster_path: String,
     val release_date: String,
     val title: String
-)
+) {
+    companion object {
+        val itemCallback: DiffUtil.ItemCallback<Movie> =
+            object : DiffUtil.ItemCallback<Movie>() {
+                override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
+                    return oldItem.id == newItem.id
+                }
+
+                override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
+                    return oldItem.overview == newItem.overview
+                            && oldItem.title == newItem.title
+                            && oldItem.poster_path == newItem.poster_path
+                }
+            }
+    }
+}
