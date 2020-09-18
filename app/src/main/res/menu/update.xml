@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+    * 업데이트 버튼.
+    * orderInCategory: 우선순위(숫자가 낮을 수록 위에 위치하게 됨.
+    -->
+    <item
+        android:id="@+id/action_update"
+        android:icon="@drawable/ic_update"
+        android:orderInCategory="100"
+        android:title="Update"
+        app:showAsAction="always"></item>
+</menu>
